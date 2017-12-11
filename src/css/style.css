@@ -1,0 +1,83 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: #d5dde0;
+  font-family: sans-serif;
+}
+
+.form-add-note {
+  padding: 0.5em;
+  background: #fff;
+}
+.form-add-note input {
+  width: 100%;
+  padding: 6px 12px;
+  border: none;
+  font-size: 1em;
+  outline-color: #abc8db;
+  outline-width: 2px;
+}
+
+.notes {
+  padding-left: 0;
+  margin: 0.5em;
+  list-style: none;
+}
+
+.wrap-note {
+  margin-bottom: 0.5em;
+}
+.wrap-note:last-child {
+  margin-bottom: 0;
+}
+
+.note {
+  overflow: auto;
+  position: relative;
+  padding: 0.5em;
+  border: 1px solid #b6caea;
+  background-color: #fafbfc;
+  border-radius: 3px;
+}
+.note:hover {
+  transition: 0.6s;
+}
+.note.completed {
+  background-color: #abc8db;
+}
+.note .edit,
+.note .value {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  padding: 6px 12px;
+  display: block;
+  border: none;
+  border-radius: 3px;
+  font-size: 1em;
+  line-height: 2;
+  outline-color: none;
+}
+.note .value {
+  line-height: 1.8;
+}
+
+.delete-note {
+  position: relative;
+  z-index: 3;
+  padding: 0;
+  float: right;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  visibility: hidden;
+}
+.note:hover .delete-note {
+  visibility: visible;
+}
